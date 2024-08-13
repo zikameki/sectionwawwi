@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>my wife🗿</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            text-align: center;
+            background-color: #DCDCDC;
+        }
+
+        /* Gaya untuk menyembunyikan halaman */
+        .page {
+            display: none;
+            width: 100%;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        /* Gaya untuk halaman yang sedang aktif */
+        .active {
+            display: block;
+        }
+
+        /* Gaya untuk video */
+        video {
+            width: 100%;
+            max-width: 800px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+
+        /* Gaya untuk tombol */
+        .navigation {
+            margin: 20px 0;
+            padding: 10px 20px;
+            background-color: #FAF0E6;
+            border: none;
+            color: #FF00FF;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .navigation:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Halaman Pertama -->
+    <div id="page1" class="page active">
+        <h1></h1>
+        <video controls>
+            <source src="vid1.mp4" type="video/mp4">
+            Browser Anda tidak mendukung tag video.
+        </video>
+        <button class="navigation" onclick="changePage()">second</button>
+    </div>
+
+    <!-- Halaman Kedua -->
+    <div id="page2" class="page">
+        <h1></h1>
+        <video controls>
+            <source src="vid2.mp4" type="video/mp4">
+            Browser Anda tidak mendukung tag video.
+        </video>
+        <button class="navigation" onclick="changePage()">First</button>
+    </div>
+
+    <script>
+        function changePage() {
+            var page1 = document.getElementById("page1");
+            var page2 = document.getElementById("page2");
+
+            if (page1.classList.contains("active")) {
+                page1.classList.remove("active");
+                page2.classList.add("active");
+            } else {
+                page2.classList.remove("active");
+                page1.classList.add("active");
+            }
+        }
+    </script>
+</body>
+</html>
